@@ -4,6 +4,8 @@ Ce projet est un fork de [Mattermost](http://www.mattermost.org/) qui tourne sur
 
 Basé sur le développement de Yuya Ochiai originellement appelé "electron-mattermost". Dveloppé en utilisant le framework  [Electron](http://electron.atom.io/).
 
+Version nécessaire d'electron : 4.2.5
+
 
 ######Mise à jour de la documentation nécessaire à partir de ce point
 
