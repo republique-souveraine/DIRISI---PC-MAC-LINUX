@@ -1,8 +1,11 @@
 # Mattermost Desktop - République souveraine edition
 
-Native desktop application for [Mattermost](http://www.mattermost.org/) running on Windows, Mac, and Linux.
+Ce projet est un fork de [Mattermost](http://www.mattermost.org/) qui tourne sur Windows, Mac, and Linux.
 
-Originally created as "electron-mattermost" by Yuya Ochiai. Developed using [Electron](http://electron.atom.io/).
+Basé sur le développement de Yuya Ochiai originellement appelé "electron-mattermost". Dveloppé en utilisant le framework  [Electron](http://electron.atom.io/).
+
+
+######Mise à jour de la documentation nécessaire à partir de ce point
 
 ![screenshot_20](https://user-images.githubusercontent.com/29708087/35169141-65d7652a-fd29-11e7-901d-735881fb7b9d.png)
 
