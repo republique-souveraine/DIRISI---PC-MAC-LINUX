@@ -1,4 +1,4 @@
-# Mattermost Desktop
+# Mattermost Desktop - République souveraine edition
 
 Native desktop application for [Mattermost](http://www.mattermost.org/) running on Windows, Mac, and Linux.
 
