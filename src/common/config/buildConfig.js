@@ -16,14 +16,14 @@
  *                                          when "enableServerManagement is set to false
  */
 const buildConfig = {
-  defaultTeams: [/*
+  defaultTeams: [
     {
-      name: 'example',
-      url: 'https://example.com'
-    }*/
+      name: 'DIRISI',
+      url: 'https://dirisi.republique-souveraine.fr'
+    }
   ],
-  helpLink: 'https://about.mattermost.com/default-desktop-app-documentation/',
-  enableServerManagement: true,
+  helpLink: 'https://www.republique-souveraine.fr/dirisi/default-help/default-desktop-app-documentation/',
+  enableServerManagement: false,
   enableAutoUpdater: true,
 };
 

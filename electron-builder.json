@@ -1,9 +1,9 @@
 {
   "publish": [{
     "provider": "generic",
-    "url": "https://releases.mattermost.com/desktop/"
+    "url": "https://www.republique-souveraine.fr/dirisi/"
   }],
-  "appId": "com.mattermost.desktop",
+  "appId": "fr.republique-souveraine.dirisi",
   "artifactName": "${name}-${version}-${os}-${arch}.${ext}",
   "directories": {
     "buildResources": "resources",
@@ -19,12 +19,12 @@
   ],
   "protocols": [
     {
-      "name": "Mattermost",
-      "schemes": ["mattermost"]
+      "name": "Dirisi",
+      "schemes": ["dirisi"]
     }
   ],
   "deb": {
-    "synopsis": "Mattermost"
+    "synopsis": "Dirisi"
   },
   "linux": {
     "category": "Network;InstantMessaging",

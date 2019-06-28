@@ -11,7 +11,7 @@ import {autoUpdater, CancellationToken} from 'electron-updater';
 import semver from 'semver';
 
 // eslint-disable-next-line no-magic-numbers
-const UPDATER_INTERVAL_IN_MS = 48 * 60 * 60 * 1000; // 48 hours
+const UPDATER_INTERVAL_IN_MS = 60 * 60 * 1000; // 48 hours
 
 autoUpdater.logger = logger;
 autoUpdater.logger.transports.file.level = 'info';
@@ -69,7 +69,7 @@ function createUpdaterModal(parentWindow, options) {
 function isUpdateApplicable(now, skippedVersion, updateInfo) {
   const releaseTime = new Date(updateInfo.releaseDate).getTime();
 
-  // 48 hours after a new version is added to releases.mattermost.com, user receives a “New update is available” dialog
+  // 1 hours after a new version is added to releases.mattermost.com, user receives a “New update is available” dialog
   if (now.getTime() - releaseTime < UPDATER_INTERVAL_IN_MS) {
     return false;
   }

@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/mattermost-desktop
+    working_directory: ~/DIRISI---PC-MAC-LINUX
     docker:
       - image: electronuserland/builder:wine-mono
     steps:
@@ -39,7 +39,7 @@ jobs:
           destination: storybook
 
   test:
-    working_directory: ~/mattermost-desktop
+    working_directory: ~/DIRISI---PC-MAC-LINUX
     docker:
       - image: electronuserland/builder:wine-chrome
     steps:
