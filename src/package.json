@@ -2,7 +2,7 @@
   "name": "RS-App",
   "productName": "RS App",
   "desktopName": "RS.App",
-  "version": "4.3.0",
+  "version": "1.0.0",
   "description": "Application officielle de République souveraine.",
   "main": "main_bundle.js",
   "author": "RS propulsée par Mattermost, Inc. <contact@republique-souveraine.fr>",

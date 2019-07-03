@@ -17,7 +17,7 @@ function createTemplate(mainWindow, config, isDev) {
   const template = [];
 
   let platformAppMenu = process.platform === 'darwin' ? [{
-    label: 'About ' + appName,
+    label: 'À propos ' + appName,
     role: 'about',
     click() {
       dialog.showMessageBox(mainWindow, {
@@ -26,7 +26,7 @@ function createTemplate(mainWindow, config, isDev) {
       });
     },
   }, separatorItem, {
-    label: 'Preferences...',
+    label: 'Préférences...',
     accelerator: 'CmdOrCtrl+,',
     click() {
       mainWindow.loadURL(settingsURL);
@@ -92,13 +92,13 @@ function createTemplate(mainWindow, config, isDev) {
   template.push({
     label: '&View',
     submenu: [{
-      label: 'Find..',
+      label: 'Chercher..',
       accelerator: 'CmdOrCtrl+F',
       click(item, focusedWindow) {
         focusedWindow.webContents.send('toggle-find');
       },
     }, {
-      label: 'Reload',
+      label: 'Recharger',
       accelerator: 'CmdOrCtrl+R',
       click(item, focusedWindow) {
         if (focusedWindow) {
@@ -110,7 +110,7 @@ function createTemplate(mainWindow, config, isDev) {
         }
       },
     }, {
-      label: 'Clear Cache and Reload',
+      label: 'Vider le cache et recharger',
       accelerator: 'Shift+CmdOrCtrl+R',
       click(item, focusedWindow) {
         if (focusedWindow) {
@@ -130,14 +130,14 @@ function createTemplate(mainWindow, config, isDev) {
     }, {
       role: 'zoomin',
     }, {
-      label: 'Zoom In (hidden)',
+      label: 'Zoom avant (hidden)',
       accelerator: 'CmdOrCtrl+=',
       visible: false,
       role: 'zoomin',
     }, {
       role: 'zoomout',
     }, {
-      label: 'Zoom Out (hidden)',
+      label: 'Zoom arrière (hidden)',
       accelerator: 'CmdOrCtrl+Shift+-',
       visible: false,
       role: 'zoomout',
@@ -154,9 +154,9 @@ function createTemplate(mainWindow, config, isDev) {
           focusedWindow.toggleDevTools();
         }
       },
-    }, {
+    }, { 
       label: 'Developer Tools for Current Server',
-      click() {
+       click() {
         mainWindow.webContents.send('open-devtool');
       },
     }],
@@ -164,7 +164,7 @@ function createTemplate(mainWindow, config, isDev) {
   template.push({
     label: '&History',
     submenu: [{
-      label: 'Back',
+      label: 'en Arrière',
       accelerator: process.platform === 'darwin' ? 'Cmd+[' : 'Alt+Left',
       click: (item, focusedWindow) => {
         if (focusedWindow === mainWindow) {
@@ -174,7 +174,7 @@ function createTemplate(mainWindow, config, isDev) {
         }
       },
     }, {
-      label: 'Forward',
+      label: 'en Avant',
       accelerator: process.platform === 'darwin' ? 'Cmd+]' : 'Alt+Right',
       click: (item, focusedWindow) => {
         if (focusedWindow === mainWindow) {
@@ -222,7 +222,7 @@ function createTemplate(mainWindow, config, isDev) {
   const submenu = [];
   if (config.helpLink) {
     submenu.push({
-      label: 'Learn More...',
+      label: 'À propos...',
       click() {
         shell.openExternal(config.helpLink);
       },
@@ -235,7 +235,7 @@ function createTemplate(mainWindow, config, isDev) {
   });
   if (config.enableAutoUpdater) {
     submenu.push({
-      label: 'Check for Updates...',
+      label: 'Rechercher les mises à jour...',
       click() {
         ipcMain.emit('check-for-updates', true);
       },
